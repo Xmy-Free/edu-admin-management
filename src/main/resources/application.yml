@@ -1,0 +1,25 @@
+﻿spring:
+  application:
+    name: edu-admin-management
+
+  datasource:
+    url: jdbc:mysql://localhost:3307/edu_admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 3000ms
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
+
